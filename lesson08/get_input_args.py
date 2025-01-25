@@ -21,7 +21,23 @@ import argparse
 #       in the return statement with parser.parse_args() parsed argument 
 #       collection that you created with this function
 # 
-def get_input_args():
+class Namespace:
+    pass
+
+
+def get_input_args() -> Namespace:
+
+    parser = argparse.ArgumentParser(
+        prog='ProgramName',
+        description='What the program does',
+        epilog='Text at the bottom of help')
+
+    parser.add_argument('--dir', default="pet_images")  # positional argument
+    parser.add_argument('--arch', default="vgg")  # option that takes a value
+    parser.add_argument('--dogfile', default="dognames.txt")
+    args = parser.parse_args()
+
+    return args
     """
     Retrieves and parses the 3 command line arguments provided by the user when
     they run the program from a terminal window. This function uses Python's 

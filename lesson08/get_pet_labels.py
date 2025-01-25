@@ -17,13 +17,32 @@
 #
 ##
 # Imports python modules
+import os
 from os import listdir
+from os.path import isfile, join
+from typing import Dict, List
+
+from soupsieve.util import lower
+
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
 #       with this function
 # 
-def get_pet_labels(image_dir):
+def get_pet_labels(image_dir: str) -> Dict[str, List[str]]:
+    files = [f for f in listdir(image_dir) if isfile(join(image_dir, f))]
+    results_dic: Dict[str, List[str]] = {}
+    for file in files:
+        split = file.lower().split("_")
+        if len(split) >= 3:
+            pet_label = " ".join(split[:-1])
+        else:
+            pet_label = split[0]
+
+        label_list: List[str] = [pet_label]
+        results_dic[file] = label_list
+    return results_dic
+
     """
     Creates a dictionary of pet labels (results_dic) based upon the filenames 
     of the image files. These pet image labels are used to check the accuracy 

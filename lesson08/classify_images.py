@@ -20,8 +20,16 @@
 #           of the pet and classifier labels as the item at index 2 of the list.
 #
 ##
-# Imports classifier function for using CNN to classify images 
-from classifier import classifier 
+# Imports classifier function for using CNN to classify images from classifier import classifier
+import os
+from typing import Dict, List
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+from sklearn.metrics import classification_report
+
+from classifier import classifier
+
 
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function. 
@@ -29,7 +37,22 @@ from classifier import classifier
 #       results_dic dictionary that is passed into the function is a mutable 
 #       data type so no return is needed.
 # 
-def classify_images(images_dir, results_dic, model):
+def classify_images(images_dir: str, results_dic: Dict[str, List[str]], model) -> None:
+    for filename, classification_label in results_dic.items():
+        image_path = os.path.join(images_dir, filename)
+        classification_result: str = classifier(image_path, model)
+
+        result_list: List[str] = results_dic[filename]
+        result_list.append("0")
+
+        for result in result_list:
+            if result in classification_result:
+                result_list[1] = "1"
+
+        result_list.append(classification_result)
+
+
+
     """
     Creates classifier labels with classifier function, compares pet labels to 
     the classifier labels, and adds the classifier label and the comparison of 
