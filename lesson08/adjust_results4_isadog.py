@@ -36,8 +36,28 @@
 #       Notice that this function doesn't return anything because the 
 #       results_dic dictionary that is passed into the function is a mutable 
 #       data type so no return is needed.
-# 
-def adjust_results4_isadog(results_dic, dogfile):
+#
+from typing import Dict, List
+
+
+def adjust_results4_isadog(results_dic: Dict[str, List[str]], dogfile: str):
+    dog_names: List[str] = []
+    with open(dogfile, 'r', encoding='utf-8') as fin:
+        dog_names = fin.read().splitlines()
+    fin.close()
+    for key, result_list in results_dic.items():
+        result_list.append("0")
+        result_list.append("0")
+        # index 3 = 0/1 where 1= Pet Image Label is a dog, 0 = Pet Image Label isn't a dog (ex: 1)
+        if result_list[1] in dog_names:
+            result_list[3] = "1"
+
+        if result_list[2] == "1" and result_list[1] not in dog_names:
+            result_list[4] = "1"
+
+
+
+        # if 1 check if breed is right and
     """
     Adjusts the results dictionary to determine if classifier correctly 
     classified images 'as a dog' or 'not a dog' especially when not a match. 

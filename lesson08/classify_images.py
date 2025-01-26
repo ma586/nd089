@@ -43,13 +43,14 @@ def classify_images(images_dir: str, results_dic: Dict[str, List[str]], model) -
         classification_result: str = classifier(image_path, model)
 
         result_list: List[str] = results_dic[filename]
+        result_list.append(classification_result)
         result_list.append("0")
 
         for result in result_list:
             if result in classification_result:
-                result_list[1] = "1"
+                result_list[2] = "1"
 
-        result_list.append(classification_result)
+
 
 
 

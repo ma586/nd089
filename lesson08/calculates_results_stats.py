@@ -41,8 +41,63 @@
 # TODO 5: Define calculates_results_stats function below, please be certain to replace None
 #       in the return statement with the results_stats_dic dictionary that you create 
 #       with this function
-# 
-def calculates_results_stats(results_dic):
+#
+from typing import Dict, List
+
+
+def calculates_results_stats(results_dic: Dict[str, List[str]]) -> Dict[str, float]:
+    results_stats_dic : Dict[str, float] = dict()
+    results_stats_dic["n_images"] = 0
+    results_stats_dic["n_dogs_img"] = 0
+    results_stats_dic["n_notdogs_img"] = 0
+    results_stats_dic["n_match"] = 0
+    results_stats_dic["n_correct_dogs"] = 0
+    results_stats_dic["n_correct_notdogs"] = 0
+    results_stats_dic["n_correct_breed"] = 0
+    results_stats_dic["pct_match"] = 0.0
+    results_stats_dic["pct_correct_dogs"] = 0.0
+    results_stats_dic["pct_correct_breed"] = 0.0
+    results_stats_dic["pct_correct_notdogs"] = 0.0
+
+    for key, result_list in results_dic.items():
+        results_stats_dic["n_images"] =  results_stats_dic["n_images"] + 1
+
+        if result_list[3] == "1" and result_list[4] == "1":
+            results_stats_dic["n_correct_dogs"] = results_stats_dic["n_correct_dogs"] + 1
+
+        if result_list[3] == "1":
+            results_stats_dic["n_dogs_img"] = results_stats_dic["n_dogs_img"] + 1
+
+        if result_list[3] == "0" and result_list[4] == "0":
+            results_stats_dic["n_correct_notdogs"] = results_stats_dic["n_correct_notdogs"] + 1
+        #D
+        if result_list[3] == "0":
+            results_stats_dic["n_notdogs_img"] = results_stats_dic["n_notdogs_img"] + 1
+
+        #E
+        if result_list[3] == "1" and result_list[2] == "1":
+            results_stats_dic["n_correct_breed"] = results_stats_dic["n_correct_breed"] + 1
+
+        # Y
+        if result_list[2] == "1":
+            results_stats_dic["n_match"] = results_stats_dic["n_match"] + 1
+
+    #1a
+    results_stats_dic["pct_correct_dogs"] =  results_stats_dic['n_correct_dogs'] /  results_stats_dic['n_dogs_img']  * 100.0
+
+    #1b
+    if results_stats_dic['n_notdogs_img'] > 0:
+        results_stats_dic['pct_correct_notdogs'] = (results_stats_dic['n_correct_notdogs'] / results_stats_dic['n_notdogs_img']) * 100.0
+    else:
+        results_stats_dic['pct_correct_notdogs'] = 0.0
+
+    #2
+    results_stats_dic["pct_correct_breed"] = results_stats_dic['n_correct_breed'] / results_stats_dic['n_dogs_img'] * 100.0
+
+
+
+
+    return results_stats_dic
     """
     Calculates statistics of the results of the program run using classifier's model 
     architecture to classifying pet images. Then puts the results statistics in a 
@@ -70,4 +125,4 @@ def calculates_results_stats(results_dic):
     """        
     # Replace None with the results_stats_dic dictionary that you created with 
     # this function 
-    return None
+

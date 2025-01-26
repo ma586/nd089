@@ -1,3 +1,6 @@
+from asq import query
+
+# https://pypi.org/project/asq/
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
@@ -31,8 +34,7 @@
 #       Notice that this function doesn't to return anything because it  
 #       prints a summary of the results using results_dic and results_stats_dic
 # 
-def print_results(results_dic, results_stats_dic, model, 
-                  print_incorrect_dogs = False, print_incorrect_breed = False):
+def print_results(results_dic, results_stats_dic, model, print_incorrect_dogs = False, print_incorrect_breed = False) -> None:
     """
     Prints summary results on the classification and then prints incorrectly 
     classified dogs and incorrectly classified dog breeds if user indicates 
@@ -61,6 +63,47 @@ def print_results(results_dic, results_stats_dic, model,
                               False doesn't print anything(default) (bool) 
     Returns:
            None - simply printing results.
-    """    
+    """
+
+    # results_stats_dic["n_images"] = 0
+    # results_stats_dic["n_dogs_img"] = 0
+    # results_stats_dic["n_notdogs_img"] = 0
+    # results_stats_dic["n_match"] = 0
+    # results_stats_dic["n_correct_dogs"] = 0
+    # results_stats_dic["n_correct_notdogs"] = 0
+    # results_stats_dic["n_correct_breed"] = 0
+    # results_stats_dic["pct_match"] = 0.0
+    # results_stats_dic["pct_correct_dogs"] = 0.0
+    # results_stats_dic["pct_correct_breed"] = 0.0
+    # results_stats_dic["pct_correct_notdogs"] = 0.0
+    print(f"######## Model used: ######## {model}")
+    print(f"Model used: {model}")
+    print("Number of Images:", results_stats_dic['n_images'])
+    print("Number of Dog Images:", results_stats_dic['n_dogs_img'])
+    print("Number of Not Dog Images:", results_stats_dic['n_notdogs_img'])
+    print("")
+    print("Percentage Calculations:")
+    print("% Correct Dogs:", results_stats_dic['pct_correct_dogs'])
+    print("% Correct Breed:", results_stats_dic['pct_correct_breed'])
+    print("% Correct Not-a Dog", results_stats_dic['pct_correct_notdogs'])
+    print("Match:", results_stats_dic['n_match'])
+    print("")
+    print("Misclassified Dogs:")
+
+    if print_incorrect_dogs and (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images']:
+        for key, value in results_dic.items():
+            if value[3] == "1":
+                print(f"image label: {value[0]}")
+                print(f"classification label: {value[1]}")
+    print("")
+    print("Misclassified Breed's of Dog:")
+    if print_incorrect_breed and results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']:
+        for key, value in results_dic.items():
+            integer_list =  [int(item) for item in results_dic[key][3:]]
+
+            if sum(integer_list) == 2 and results_dic[key][2] == 0:
+                print(f"image label: {value[0]}")
+                print(f"classification label: {value[1]}")
+
     None
                 

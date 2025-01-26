@@ -1,0 +1,90 @@
+Command Line Arguments:
+     dir = pet_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 40 key-value pairs.
+Below are 10 of them:
+ 1 key:                     cat_01.jpg  label:                        cat
+ 2 key:               Poodle_07927.jpg  label:                     poodle
+ 3 key:                     cat_02.jpg  label:                        cat
+ 4 key:           Great_dane_05320.jpg  label:                 great dane
+ 5 key:            Dalmatian_04068.jpg  label:                  dalmatian
+ 6 key:                   gecko_02.jpg  label:                      gecko
+ 7 key:                     cat_07.jpg  label:                        cat
+ 8 key:       Great_pyrenees_05435.jpg  label:             great pyrenees
+ 9 key:  German_shepherd_dog_04931.jpg  label:        german shepherd dog
+10 key:  German_shepherd_dog_04890.jpg  label:        german shepherd dog
+
+     MATCH:
+
+ NOT A MATCH:
+
+# Total Images 0 # Matches: 0 # NOT Matches: 0
+
+     MATCH:
+
+ NOT A MATCH:
+
+# Total Images 0 # Matches: 0 # NOT Matches: 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images: 40  N Dog Images: 18  N NotDog Images: 22 
+Pct Corr dog:   0.0 Pct Corr NOTdog:   0.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images: 40  N Dog Images:  0  N NotDog Images: 40 
+Pct Corr dog:   0.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:   0.0
+######## Model used: ######## vgg
+Model used: vgg
+Number of Images: 40
+Number of Dog Images: 18
+Number of Not Dog Images: 22
+
+Percentage Calculations:
+% Correct Dogs: 0.0
+% Correct Breed: 100.0
+% Correct Not-a Dog 0.0
+Match: 40
+
+Misclassified Dogs:
+image label: poodle
+classification label: standard poodle, poodle
+image label: dalmatian
+classification label: dalmatian, coach dog, carriage dog
+image label: collie
+classification label: collie
+image label: dalmatian
+classification label: dalmatian, coach dog, carriage dog
+image label: poodle
+classification label: standard poodle, poodle
+image label: miniature schnauzer
+classification label: miniature schnauzer
+image label: beagle
+classification label: beagle
+image label: basenji
+classification label: basenji
+image label: dalmatian
+classification label: dalmatian, coach dog, carriage dog
+image label: boxer
+classification label: boxer
+image label: basenji
+classification label: basenji
+image label: golden retriever
+classification label: golden retriever
+image label: golden retriever
+classification label: golden retriever
+image label: golden retriever
+classification label: golden retriever
+image label: beagle
+classification label: beagle
+image label: great pyrenees
+classification label: kuvasz
+image label: golden retriever
+classification label: golden retriever
+image label: basset hound
+classification label: basset, basset hound
+
+Misclassified Breed's of Dog:
+
+** Total Elapsed Runtime: 0:0:1
