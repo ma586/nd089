@@ -86,6 +86,8 @@ def print_results(results_dic, results_stats_dic, model, print_incorrect_dogs = 
     print("% Correct Dogs:", results_stats_dic['pct_correct_dogs'])
     print("% Correct Breed:", results_stats_dic['pct_correct_breed'])
     print("% Correct Not-a Dog", results_stats_dic['pct_correct_notdogs'])
+    print("% Match", results_stats_dic['pct_match'])
+
     print("Match:", results_stats_dic['n_match'])
     print("")
     print("Misclassified Dogs:")

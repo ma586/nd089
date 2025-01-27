@@ -29,8 +29,8 @@ Below are 10 of them:
 # Total Images 0 # Matches: 0 # NOT Matches: 0
 
  ** Statistics from calculates_results_stats() function:
-N Images: 40  N Dog Images: 17  N NotDog Images: 23 
-Pct Corr dog:   0.0 Pct Corr NOTdog:   0.0  Pct Corr Breed: 100.0
+N Images: 40  N Dog Images: 30  N NotDog Images: 10 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed: 100.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images:  0  N NotDog Images: 40 
@@ -38,26 +38,43 @@ Pct Corr dog:   0.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:   0.0
 ######## Model used: ######## resnet
 Model used: resnet
 Number of Images: 40
-Number of Dog Images: 17
-Number of Not Dog Images: 23
+Number of Dog Images: 30
+Number of Not Dog Images: 10
 
 Percentage Calculations:
-% Correct Dogs: 0.0
+% Correct Dogs: 100.0
 % Correct Breed: 100.0
-% Correct Not-a Dog 0.0
+% Correct Not-a Dog 90.0
+% Match 100.0
 Match: 40
 
 Misclassified Dogs:
 image label: poodle
 classification label: standard poodle, poodle
+image label: great dane
+classification label: great dane
 image label: dalmatian
 classification label: dalmatian, coach dog, carriage dog
+image label: great pyrenees
+classification label: great pyrenees
+image label: german shepherd dog
+classification label: german shepherd, german shepherd dog, german police dog, alsatian
+image label: german shepherd dog
+classification label: german shepherd, german shepherd dog, german police dog, alsatian
 image label: collie
 classification label: collie
+image label: saint bernard
+classification label: saint bernard, st bernard
 image label: dalmatian
 classification label: dalmatian, coach dog, carriage dog
 image label: poodle
 classification label: standard poodle, poodle
+image label: beagle
+classification label: walker hound, walker foxhound
+image label: boston terrier
+classification label: boston bull, boston terrier
+image label: boston terrier
+classification label: boston bull, boston terrier
 image label: miniature schnauzer
 classification label: miniature schnauzer
 image label: beagle
@@ -70,14 +87,24 @@ image label: boxer
 classification label: boxer
 image label: basenji
 classification label: basenji
+image label: boston terrier
+classification label: boston bull, boston terrier
+image label: golden retriever
+classification label: leonberg
 image label: golden retriever
 classification label: golden retriever
+image label: saint bernard
+classification label: saint bernard, st bernard
 image label: golden retriever
 classification label: golden retriever
 image label: beagle
 classification label: beagle
 image label: great pyrenees
 classification label: kuvasz
+image label: german shorthaired pointer
+classification label: german shorthaired pointer
+image label: cocker spaniel
+classification label: cocker spaniel, english cocker spaniel, cocker
 image label: golden retriever
 classification label: golden retriever
 image label: basset hound

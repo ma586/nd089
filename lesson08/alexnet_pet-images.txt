@@ -29,8 +29,8 @@ Below are 10 of them:
 # Total Images 0 # Matches: 0 # NOT Matches: 0
 
  ** Statistics from calculates_results_stats() function:
-N Images: 40  N Dog Images: 16  N NotDog Images: 24 
-Pct Corr dog:   0.0 Pct Corr NOTdog:   0.0  Pct Corr Breed: 100.0
+N Images: 40  N Dog Images: 30  N NotDog Images: 10 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images:  0  N NotDog Images: 40 
@@ -38,48 +38,17 @@ Pct Corr dog:   0.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:   0.0
 ######## Model used: ######## alexnet
 Model used: alexnet
 Number of Images: 40
-Number of Dog Images: 16
-Number of Not Dog Images: 24
+Number of Dog Images: 30
+Number of Not Dog Images: 10
 
 Percentage Calculations:
-% Correct Dogs: 0.0
+% Correct Dogs: 100.0
 % Correct Breed: 100.0
-% Correct Not-a Dog 0.0
+% Correct Not-a Dog 100.0
+% Match 100.0
 Match: 40
 
 Misclassified Dogs:
-image label: poodle
-classification label: standard poodle, poodle
-image label: dalmatian
-classification label: dalmatian, coach dog, carriage dog
-image label: collie
-classification label: collie
-image label: dalmatian
-classification label: dalmatian, coach dog, carriage dog
-image label: poodle
-classification label: standard poodle, poodle
-image label: boston terrier
-classification label: basenji
-image label: miniature schnauzer
-classification label: miniature schnauzer
-image label: basenji
-classification label: basenji
-image label: dalmatian
-classification label: dalmatian, coach dog, carriage dog
-image label: boxer
-classification label: boxer
-image label: basenji
-classification label: basenji
-image label: golden retriever
-classification label: golden retriever
-image label: golden retriever
-classification label: golden retriever
-image label: beagle
-classification label: beagle
-image label: great pyrenees
-classification label: kuvasz
-image label: basset hound
-classification label: basset, basset hound
 
 Misclassified Breed's of Dog:
 

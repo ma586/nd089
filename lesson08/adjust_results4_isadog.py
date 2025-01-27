@@ -49,10 +49,11 @@ def adjust_results4_isadog(results_dic: Dict[str, List[str]], dogfile: str):
         result_list.append("0")
         result_list.append("0")
         # index 3 = 0/1 where 1= Pet Image Label is a dog, 0 = Pet Image Label isn't a dog (ex: 1)
-        if result_list[1] in dog_names:
+        if result_list[0] in dog_names:
             result_list[3] = "1"
 
-        if result_list[2] == "1" and result_list[1] not in dog_names:
+#index 4 = 0/1 where 1= Classifier Label is a dog, 0 = Classifier Label isn't a dog (ex: 1)
+        if result_list[1] in dog_names:
             result_list[4] = "1"
 
 
