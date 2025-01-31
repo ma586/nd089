@@ -1,5 +1,3 @@
-from asq import query
-
 # https://pypi.org/project/asq/
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
