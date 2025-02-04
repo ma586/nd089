@@ -63,17 +63,6 @@ def print_results(results_dic, results_stats_dic, model, print_incorrect_dogs = 
            None - simply printing results.
     """
 
-    # results_stats_dic["n_images"] = 0
-    # results_stats_dic["n_dogs_img"] = 0
-    # results_stats_dic["n_notdogs_img"] = 0
-    # results_stats_dic["n_match"] = 0
-    # results_stats_dic["n_correct_dogs"] = 0
-    # results_stats_dic["n_correct_notdogs"] = 0
-    # results_stats_dic["n_correct_breed"] = 0
-    # results_stats_dic["pct_match"] = 0.0
-    # results_stats_dic["pct_correct_dogs"] = 0.0
-    # results_stats_dic["pct_correct_breed"] = 0.0
-    # results_stats_dic["pct_correct_notdogs"] = 0.0
     print(f"######## Model used: ######## {model}")
     print(f"Model used: {model}")
     print("Number of Images:", results_stats_dic['n_images'])
@@ -86,13 +75,12 @@ def print_results(results_dic, results_stats_dic, model, print_incorrect_dogs = 
     print("% Correct Not-a Dog", results_stats_dic['pct_correct_notdogs'])
     print("% Match", results_stats_dic['pct_match'])
 
-    print("Match:", results_stats_dic['n_match'])
     print("")
     print("Misclassified Dogs:")
 
     if print_incorrect_dogs and (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images']:
         for key, value in results_dic.items():
-            if value[3] == "1":
+            if value[3] == 1 and value[4] == 0 or value[3] == 0 and value[4] == 1:
                 print(f"image label: {value[0]}")
                 print(f"classification label: {value[1]}")
     print("")

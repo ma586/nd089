@@ -69,27 +69,27 @@ def calculates_results_stats(results_dic: Dict[str, List[str]]) -> Dict[str, flo
     for key, result_list in results_dic.items():
         results_stats_dic["n_images"] =  results_stats_dic["n_images"] + 1
 
-        if result_list[3] == "1" and result_list[4] == "1":
+        if result_list[3] == 1 and result_list[4] == 1:
             results_stats_dic["n_correct_dogs"] = results_stats_dic["n_correct_dogs"] + 1
 
 
-        if result_list[3] == "1":
+        if result_list[3] == 1:
             results_stats_dic["n_dogs_img"] = results_stats_dic["n_dogs_img"] + 1
 
 
-        if result_list[3] == "0" and result_list[4] == "0":
+        if result_list[3] == 0 and result_list[4] == 0:
             results_stats_dic["n_correct_notdogs"] = results_stats_dic["n_correct_notdogs"] + 1
         #D
-        if result_list[3] == "0":
+        if result_list[3] == 0:
             results_stats_dic["n_notdogs_img"] = results_stats_dic["n_notdogs_img"] + 1
 
         #E
 
-        if result_list[3] == "1" and result_list[2] == "1":
+        if result_list[3] == 1 and result_list[2] == 1:
             results_stats_dic["n_correct_breed"] = results_stats_dic["n_correct_breed"] + 1
 
         # Y
-        if result_list[2] == "1":
+        if result_list[2] == 1:
             results_stats_dic["n_match"] = results_stats_dic["n_match"] + 1
 
     #1a

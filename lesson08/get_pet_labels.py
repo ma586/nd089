@@ -33,6 +33,8 @@ def get_pet_labels(image_dir: str) -> Dict[str, List[str]]:
     files = [f for f in listdir(image_dir) if isfile(join(image_dir, f))]
     results_dic: Dict[str, List[str]] = {}
     for file in files:
+        if file.startswith("."):
+            continue
         split = file.lower().split("_")
         if len(split) >= 3:
             pet_label = " ".join(split[:-1])

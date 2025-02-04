@@ -40,25 +40,28 @@
 from typing import Dict, List
 
 
-def adjust_results4_isadog(results_dic: Dict[str, List[str]], dogfile: str):
+# Add to whether pet labels & classifier labels are dogs by appending
+# two items to end of value(List) in results_dic.
+
+# List Index 3 = whether(1) or not(0) Pet Image Label is a dog AND
+# List Index 4 = whether(1) or not(0) Classifier Label is a dog
+# How - iterate through results_dic if labels are found in dognames_dic
+# then label "is a dog" index3/4=1 otherwise index3/4=0 "not a dog"
+def adjust_results4_isadog(results_dic: Dict[str, List[str]], dogfile_path: str):
     dog_names: List[str] = []
-    with open(dogfile, 'r', encoding='utf-8') as fin:
-        dog_names = fin.read().splitlines()
-    fin.close()
+    with open(dogfile_path, 'r', encoding='utf-8') as dogfile:
+        dog_names = dogfile.read().splitlines()
+    dogfile.close()
     for key, result_list in results_dic.items():
-        result_list.append("0")
-        result_list.append("0")
-        # index 3 = 0/1 where 1= Pet Image Label is a dog, 0 = Pet Image Label isn't a dog (ex: 1)
         if result_list[0] in dog_names:
-            result_list[3] = "1"
+            result_list.append(1)
+        else:
+            result_list.append(0)
 
-#index 4 = 0/1 where 1= Classifier Label is a dog, 0 = Classifier Label isn't a dog (ex: 1)
         if result_list[1] in dog_names:
-            result_list[4] = "1"
-
-
-
-        # if 1 check if breed is right and
+            result_list.append(1)
+        else:
+            result_list.append(0)
     """
     Adjusts the results dictionary to determine if classifier correctly 
     classified images 'as a dog' or 'not a dog' especially when not a match. 

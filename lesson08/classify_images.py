@@ -37,20 +37,15 @@ from classifier import classifier
 #       results_dic dictionary that is passed into the function is a mutable 
 #       data type so no return is needed.
 # 
-def classify_images(images_dir: str, results_dic: Dict[str, List[str]], model) -> None:
+def classify_images(images_dir: str, results_dic: [], model) -> None:
     for filename, classification_label in results_dic.items():
         image_path = os.path.join(images_dir, filename)
         classification_result: str = classifier(image_path, model)
 
-        result_list: List[str] = results_dic[filename]
-        result_list.append(classification_result.strip().lower())
-        result_list.append("0")
-
-        for result in result_list:
-            if result in classification_result.strip().lower():
-                result_list[2] = "1"
-
-
+        results_dic[filename].append(classification_result.strip().lower())
+        results_dic[filename].append(0)
+        if results_dic[filename][0] in results_dic[filename][1]:
+            results_dic[filename][2] = 1
 
 
 
