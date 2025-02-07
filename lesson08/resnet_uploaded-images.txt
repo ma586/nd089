@@ -69,8 +69,6 @@ Percentage Calculations:
 % Correct Not-a Dog 100.0
 % Match 25.0
 
-Misclassified Dogs:
-
 Misclassified Breed's of Dog:
 image label: dog
 classification label: beagle

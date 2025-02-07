@@ -75,17 +75,20 @@ def print_results(results_dic, results_stats_dic, model, print_incorrect_dogs = 
     print("% Correct Not-a Dog", results_stats_dic['pct_correct_notdogs'])
     print("% Match", results_stats_dic['pct_match'])
 
-    print("")
-    print("Misclassified Dogs:")
 
     if print_incorrect_dogs and (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images']:
+        print("")
+        print("Misclassified Dogs:")
+
         for key, value in results_dic.items():
             if value[3] == 1 and value[4] == 0 or value[3] == 0 and value[4] == 1:
                 print(f"image label: {value[0]}")
                 print(f"classification label: {value[1]}")
-    print("")
-    print("Misclassified Breed's of Dog:")
+
     if print_incorrect_breed and results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']:
+        print("")
+        print("Misclassified Breed's of Dog:")
+
         for key, value in results_dic.items():
             integer_list =  [int(item) for item in results_dic[key][3:]]
 
