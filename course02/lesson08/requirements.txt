@@ -1,0 +1,6 @@
+Pillow==11.1.0
+scikit_learn==1.6.1
+soupsieve==2.6
+torch==2.5.1
+torchvision==0.20.1
+asq
