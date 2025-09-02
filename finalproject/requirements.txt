@@ -1,0 +1,4 @@
+argparse
+torchvision
+pillow
+numpy
