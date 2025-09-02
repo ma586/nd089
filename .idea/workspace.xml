@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fec3e174-ec4a-42ed-bfb3-e43258e24bb1" name="Changes" comment="clean up code.">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fec3e174-ec4a-42ed-bfb3-e43258e24bb1" name="Changes" comment="clean up">
+      <change beforePath="$PROJECT_DIR$/finalproject/Image Classifier Project.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finalproject/Image Classifier Project.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.cmdparser.executor&quot;: &quot;Run&quot;,
-    &quot;Python.predict.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.train.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/m/src/github/ai/nd089/finalproject/aipnd-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.cmdparser.executor": "Run",
+    "Python.predict.executor": "Debug",
+    "Python.train.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/m/src/github/ai/nd089/finalproject/aipnd-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/finalproject/aipnd-project" />
@@ -75,7 +74,7 @@
       <recent name="$PROJECT_DIR$/course06/36" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.predict">
     <configuration name="predict" type="PythonConfigurationType" factoryName="Python">
       <module name="nd089" />
       <option name="ENV_FILES" value="" />
@@ -86,12 +85,12 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="nd089" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finalproject/aipnd-project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finalproject" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finalproject/aipnd-project/predict.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finalproject/predict.py" />
       <option name="PARAMETERS" value="&quot;./flower_data/valid/1/image_06739.jpg&quot; &quot;./checkpoint.pth&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756839480705</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="clean up">
+      <option name="closed" value="true" />
+      <created>1756839947676</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756839947676</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +202,8 @@
     <MESSAGE value="add files" />
     <MESSAGE value="before, cleaning up" />
     <MESSAGE value="clean up code." />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up code." />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
