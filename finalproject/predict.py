@@ -100,6 +100,7 @@ def set_device(gpu: str):
         device = torch.device("cpu")
     return device
 
+# Used google gemeni to help me for this part
 def process_image(image_path: str = None):
 
     try:
